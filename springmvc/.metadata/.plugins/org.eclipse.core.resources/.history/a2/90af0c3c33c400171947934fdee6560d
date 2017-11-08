@@ -1,0 +1,29 @@
+package simplethread;
+
+public class Sleepdemo extends Thread{
+	int start;
+	
+	public Sleepdemo(int start) {
+		super();
+		this.start = start;
+	}
+
+	public void run(){
+		for(int i=start;i<start+10;i++){
+			try{
+				
+				System.out.println(i);
+			}
+			catch(Exception ex){
+				System.out.println(ex.getMessage());
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Sleepdemo t1=new Sleepdemo(100);
+		Sleepdemo t2=new Sleepdemo(100);
+	}
+
+}

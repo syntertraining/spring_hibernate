@@ -1,0 +1,5 @@
+package nestedstaticclass;
+
+public class Outer {
+
+}

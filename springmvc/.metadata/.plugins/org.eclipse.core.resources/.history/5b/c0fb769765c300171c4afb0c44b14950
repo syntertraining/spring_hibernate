@@ -1,0 +1,11 @@
+package innerclasespkgemo;
+
+public class mainapp01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Outer outer=new Outer();
+		outer.display_inner();
+	}
+
+}

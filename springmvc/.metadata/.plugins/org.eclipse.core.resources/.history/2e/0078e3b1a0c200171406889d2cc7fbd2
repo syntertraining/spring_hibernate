@@ -1,0 +1,7 @@
+package exceptiondemo;
+
+public class InvalidAgeException extends Exception
+{
+	
+
+}

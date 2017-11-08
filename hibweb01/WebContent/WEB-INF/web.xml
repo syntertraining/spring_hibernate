@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>hibeweb01</display-name>
+  <servlet>
+    <display-name>User</display-name>
+    <servlet-name>User</servlet-name>
+    <servlet-class>com.mypkg.hibernate.controller.UserControllerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>success</display-name>
+    <servlet-name>success</servlet-name>
+    <servlet-class>com.mypkg.hibernate.controller.success</servlet-class>
+  </servlet>
+  <servlet>
+   <display-name>UserSelect</display-name>
+    <servlet-name>UserSelect</servlet-name>
+    <servlet-class>com.mypkg.hibernate.controller.UserSelect</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>success</servlet-name>
+    <url-pattern>/success</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>UserSelect</servlet-name>
+    <url-pattern>/showuserresults</url-pattern>
+  </servlet-mapping>
+</web-app>

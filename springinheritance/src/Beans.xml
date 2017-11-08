@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="beantemplate"  abstract="true">
+<property name="message1" value="one one" />
+<property name="message2" value="one two" />
+<property name="message3" value="one three" />
+</bean>
+<bean id="hello2" class="mypkg.hello2" parent="beantemplate">
+<property name="message1" value="two one" />
+<property name="message3" value="two three" />
+</bean>
+</beans>

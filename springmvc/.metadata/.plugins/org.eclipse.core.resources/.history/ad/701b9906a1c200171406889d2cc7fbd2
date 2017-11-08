@@ -1,0 +1,18 @@
+package exceptiondemo;
+
+public class customexceptiondemo {
+
+	static void validate(int age) throws InvalidAgeException{
+		if(age<18){
+			throw new InvalidAgeException("not a valid age");
+		}
+		else{
+			System.out.println("you are eligible to vote");
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

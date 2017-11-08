@@ -1,0 +1,5 @@
+package innermethods;
+
+public class Outer {
+
+}

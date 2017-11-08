@@ -1,0 +1,28 @@
+package simplethread;
+
+public class GetThreadName implements Runnable{
+	int start;
+	GetThreadName(int start){
+		this.start=start;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for(int i=start;i<start+10;i++){
+			try{
+				
+				System.out.println(Thread.currentThread().getName()+"value is :"+i);
+				
+			}
+			catch(Exception ex){
+				System.out.println(ex.getMessage());
+			}
+		}
+	}
+
+}

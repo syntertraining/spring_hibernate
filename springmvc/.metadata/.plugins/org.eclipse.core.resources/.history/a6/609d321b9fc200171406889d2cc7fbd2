@@ -1,0 +1,17 @@
+package exceptiondemo;
+
+public class throwdemo {
+	
+	public int div(int a ,int b){
+		int result=a/b;
+		if(a<10){
+			throw new ArithmeticException("number too small for the operation");
+		}
+		return result;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

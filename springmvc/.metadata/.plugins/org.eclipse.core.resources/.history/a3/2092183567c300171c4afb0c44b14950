@@ -1,0 +1,5 @@
+package anonymousclassargument;
+
+public interface Message {
+
+}

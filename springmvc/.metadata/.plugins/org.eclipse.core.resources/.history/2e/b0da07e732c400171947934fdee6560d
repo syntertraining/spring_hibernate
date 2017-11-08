@@ -1,0 +1,22 @@
+package simplethread;
+
+public class DaemonDemo extends Thread{
+	public void run(){
+		if(Thread.currentThread().isDaemon()){
+			System.out.println("daemon thread is working");
+		}
+		else{
+			System.out.println("user thread is working");
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DaemonDemo t1=new DaemonDemo();
+		DaemonDemo t2=new DaemonDemo();
+		DaemonDemo t3=new DaemonDemo();
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+
+}

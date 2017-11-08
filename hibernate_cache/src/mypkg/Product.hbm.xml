@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="mypkg.Product" table="PRODUCT">
+<cache usage="read-only" />  
+<id name="productId" type="int">
+<column name="productid" />
+<generator class="increment" />
+
+</id>
+<property name="proName" type="java.lang.String">
+<column name="proname" />
+</property>
+<property name="price" type="double">
+<column name="price" />
+</property>
+
+<query name="findbyname">
+<![CDATA[from Product p where p.proName=:name]]>
+</query>
+</class>
+</hibernate-mapping>

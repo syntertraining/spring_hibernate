@@ -1,0 +1,12 @@
+package innermethods;
+
+public class Outer {
+	void myMethod(){
+		int num =23;
+		class MethodInner{
+			public void print(){
+				System.out.println("this is method in inner class"+num);
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+package simplethread;
+
+public class Thread01 extends Thread
+{
+	int start;
+	
+	Thread01(int start){
+		this.start=start;
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for(int i=start;i<start+10;i++){
+			try{
+				for(int j=0;j<i;i++){
+					System.out.print(i+" ");
+				}
+				System.out.println();
+			}
+			catch(Exception ex){
+				System.out.println(ex.getMessage());
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread01 t1=new Thread01(100);
+		Thread01 t2=new Thread01(200);
+		t1.start();;
+		t2.start();
+	}
+
+}

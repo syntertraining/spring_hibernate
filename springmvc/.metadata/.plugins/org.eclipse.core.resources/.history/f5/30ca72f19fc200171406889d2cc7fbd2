@@ -1,0 +1,31 @@
+package exceptiondemo;
+
+import java.io.FileNotFoundException;
+
+public class throwdemo {
+	
+	public int div(int a ,int b) throws ArithmeticException
+	{
+		int result=0;
+		if(a<10){
+			throw new ArithmeticException("number too small for the operation");
+		}
+		else{
+			result=a/b;
+		}
+		return result;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		throwdemo td=new throwdemo();
+		int res=0;
+		try{
+			res=td.div(9, 3);
+		}
+		catch(ArrayIndexOutOfBoundsException e){
+			System.out.println("got some exception");
+		}
+		System.out.println("the result is :"+res);
+	}
+
+}

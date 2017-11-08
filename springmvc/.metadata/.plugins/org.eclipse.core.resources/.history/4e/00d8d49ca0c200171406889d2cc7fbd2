@@ -1,0 +1,5 @@
+package exceptiondemo;
+
+public class InvalidAgeException {
+
+}

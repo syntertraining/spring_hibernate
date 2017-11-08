@@ -1,0 +1,25 @@
+package exceptiondemo;
+
+public class Exceptiondemo01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			int c = 0;
+			int a = 50;
+			int[] b = { 1, 2, 0, 10, 5 };
+			for (int i = 0; i < 5; i++) {
+				try {
+					c = a / b[i];
+				} catch (ArithmeticException e) {
+					e.printStackTrace();
+				}
+				System.out.println("the result for b["+i+"]" + c);
+			}
+
+		} catch (ArithmeticException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

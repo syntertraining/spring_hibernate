@@ -1,0 +1,32 @@
+package simplethread;
+
+public class GetThreadName implements Runnable{
+	int start;
+	GetThreadName(int start){
+		this.start=start;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GetThreadName m1=new GetThreadName(200);
+		Thread t1=new Thread(m1);
+		Thread t2=new Thread(m1);
+		t1.start();
+		t2.start();
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for(int i=start;i<start+10;i++){
+			try{
+				
+				System.out.println(Thread.currentThread().getName()+"value is :"+i);
+				
+			}
+			catch(Exception ex){
+				System.out.println(ex.getMessage());
+			}
+		}
+	}
+
+}

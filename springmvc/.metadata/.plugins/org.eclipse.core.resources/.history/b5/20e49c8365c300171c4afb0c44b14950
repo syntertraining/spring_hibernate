@@ -1,0 +1,14 @@
+package innerclasespkgemo;
+
+public class Outer {
+	int num;
+	private class Inner{
+		public void print(){
+			System.out.println("this is an inner class");
+		}
+	}
+	void display_inner(){
+		Inner inner=new Inner();
+		inner.print();
+	}
+}
